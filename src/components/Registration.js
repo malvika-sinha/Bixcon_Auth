@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 const Registration = () => {
     return (
         <div className="min-h-screen flex">
-            <div className="w-[35%] bg-[#0C0C0C] flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center w-full md:w-[50%] lg:w-[35%] bg-[#0C0C0C] flex-grow">
                 <div className="flex justify-center mb-6">
-                    <Logo className="w-[200px] h-[200px] text-white" />
+                    <Logo className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] text-white" />
                 </div>
-                <div className="text-white w-[80%]">
-                    <h1 className="text-4xl text-[#F2613F] font-bold mb-6 text-center">Register Account</h1>
+                <div className="text-white w-[90%] lg:w-[80%]">
+                    <h1 className="text-3xl md:text-4xl text-[#F2613F] font-bold mb-6 text-center">Register Account</h1>
                     <form className="space-y-4">
                         <div>
-                            <label className="block text-sm text-[#9B3922] ">Enter Name</label>
+                            <label className="block text-sm text-[#9B3922]">Enter Name</label>
                             <input type="text" className="w-full p-2 border border-gray-300 placeholder-white rounded bg-[#9B3922] border-none" placeholder="Enter your Name" />
                         </div>
                         <div>
@@ -30,20 +30,29 @@ const Registration = () => {
                         </div>
                         <button className="w-full bg-[#F2613F] text-white p-2 rounded">Create Account</button>
                     </form>
-                    <div className="text-center mt-6">
-                        <p class="text-sm mb-4 relative left-[-29%] top-[-15px]">___________________________</p>
-                        <p class="text-sm mb-4 relative top-[-44px] left-[-8px]">OR</p>
-                        <p class="text-sm relative top-[-87px] left-[102px]">______________________________</p>
+
+                    {/* OR Section */}
+                    <div className="flex flex-col items-center mt-6">
+                        <div className="flex items-center mb-4 w-full">
+                            <div className="flex-grow border-t border-gray-300" />
+                            <span className="mx-2 text-sm">OR</span>
+                            <div className="flex-grow border-t border-gray-300" />
+                        </div>
                     </div>
 
-                    <div className="text-center mt-6 relative top-[-75px]">
-                        <p className="text-sm">Already have an account? <Link to="/login" className="bg-[#F2613F] text-white block relative left-[279px] w-[29%] h-[22px] rounded-[4px] top-[-21px]">Login</Link></p>
+                    {/* Login Link Section */}
+                    <div className="text-center mt-6 relative top-[-3%]">
+                        <p className="text-sm mb-2">Already have an account?</p>
+                        <Link to="/login" className="bg-[#F2613F] text-white block w-[42%] relative top-[9px] mx-auto rounded-[4px] p-2 text-center">
+                            Login
+                        </Link>
                     </div>
+
                 </div>
             </div>
 
             {/* Background Image */}
-            <div className="w-[65%] h-756px">
+            <div className="hidden md:block md:w-[50%] lg:w-[65%]">
                 <img
                     src="https://i.postimg.cc/pTjQmjhG/background.png"
                     className="h-full w-full object-cover"

@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.circle {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  border: 2px solid #F2613F; /* Border color */
+  border-radius: 50%; /* Make it circular */
+  background: rgba(242, 97, 63, 0.3); /* Background color with opacity */
+  transition: all 0.1s ease; /* Smooth transition effect */
+  z-index: 9999; /* Ensure it stays on top */
+}
